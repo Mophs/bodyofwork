@@ -9,18 +9,20 @@ heroImage: "./parabola/722803-max.jpg"
 
 Parabolic microphones are used to collect and amplify sound at distance. In collaboration with Jed Prickett this 3D printed paraboloid was built to support Jed's ecological and musical pursuits.
 
-In 2023 musician and microscope artist [Peregrine Hyde](https://www.perescope.co.nz/) brought our first prototype to South Georgia as part of an [Antarctica Heritage Trust](https://antarctic-heritage.recollect.co.nz/) expedition where he made recordings of wildlife and sea ice movements.
+In 2023 musician and microscope artist [Peregrin Hyde](https://www.perescope.co.nz/) brought our first prototype to South Georgia as part of an [Antarctica Heritage Trust](https://antarctic-heritage.recollect.co.nz/) expedition where he made recordings of wildlife and sea ice movements.
 
 ## V1, South Georgia
 
-![microphone in use on boat](parabola/peregrine.png)
-_Peregrine Hyde in South Georgia_
+![microphone in use on boat](parabola/Peregrin.png)
+_Peregrin Hyde in South Georgia_
+
+From Peregrin's expedition resulted in [Into Ocean & Ice](https://soundcloud.com/peregrinz/into-ocean-and-ice), a soundscape for the [New Zealand Maritime Museum](https://www.maritimemuseum.co.nz/exhibitions/into-ocean-and-ice?gad_source=1)'s exhibition of the same name, as well as [Watching the weather in the far southern seas](https://www.rnz.co.nz/national/programmes/ourchangingworld/audio/2018926815/watching-the-weather-in-the-far-southern-seas) , a podcast for Radio New Zealand's Our Changing world programme.
 
 ## V2, Antarctica
 
 ![detail view](parabola/v2_cal_aht1.png)
 
-During 2024 we rebuilt our design from the ground up to solve key issues identified on Peregrine's expedition.
+During 2024 we rebuilt our design from the ground up to solve key issues identified on Peregrin's expedition.
 In 2025 Calum Turner brought our second model on an Antarctica expedition by the AHT, taking recordings in historic sites.
 
 - We reduced the number and type of fixtures needed to assemble the dish. Standardising all bolts at M3 for connections between pieces and M8 for structural elements. Heat-set inserts further simplified the bill of materials, made the assembly more resilient against nuts coming loose and importantly reduced the small part count in an environment where the temperatures require mittens.
