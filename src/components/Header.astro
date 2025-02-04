@@ -5,7 +5,11 @@ import { SITE_TITLE } from "../consts";
 
 <header>
   <nav>
-    <h2><a href="/">{SITE_TITLE}</a></h2>
+    <!-- <h2><a href="/">{SITE_TITLE}</a></h2> -->
+    <div class="nametag">
+      <h2 class="fullname">TOR HALLE-MCINTYRE</h2>
+      <h2 class="shortname">TOR</h2>
+    </div>
     <div class="internal-links">
       <HeaderLink href="/">About</HeaderLink>
       <HeaderLink href="/projects">Projects</HeaderLink>
@@ -18,6 +22,8 @@ import { SITE_TITLE } from "../consts";
     padding: 0 1em;
     background: white;
     box-shadow: 0 2px 8px rgba(var(--black), 5%);
+    border-bottom: 0.1em solid transparent;
+    border-bottom-color: var(--accent);
   }
   h2 {
     margin: 0;
@@ -50,8 +56,25 @@ import { SITE_TITLE } from "../consts";
   .social-links a {
     display: flex;
   }
+  .nametag {
+    display: flex;
+  }
+  .shortname {
+    display: none;
+  }
+  .fullname {
+    display: block;
+  }
   @media (max-width: 720px) {
     .social-links {
+      display: none;
+    }
+  }
+  @media (max-width: 300px) {
+    .shortname {
+      display: block;
+    }
+    .fullname {
       display: none;
     }
   }
