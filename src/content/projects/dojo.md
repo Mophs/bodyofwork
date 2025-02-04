@@ -2,7 +2,7 @@
 title: "The Dojo Stage"
 description: "Stage visuals at Twisted Frequency 2024/25"
 pubDate: "Dec 27 2024"
-heroImage: /src/content/projects/dojo/tf25-maze.jpg
+heroImage: dojo/tf25-maze.jpg
 ---
 
 ## Twisted Frequency — 10 year anniversary, 2024/25
