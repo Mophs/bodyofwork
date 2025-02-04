@@ -17,14 +17,14 @@ const posts = (await getCollection("projects")).sort(
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     <style>
       main {
-        width: 960px;
+        width: 90%;
       }
       ul {
         display: flex;
         flex-wrap: wrap;
-        gap: 2rem;
+        gap: 1rem;
         list-style-type: none;
-        margin: 0;
+        margin: 0rem;
         padding: 0;
       }
       ul li {
@@ -34,20 +34,20 @@ const posts = (await getCollection("projects")).sort(
         text-decoration: none;
         transition: 0.2s ease;
       }
-      ul li:first-child {
+      /* ul li:first-child {
         width: 100%;
         margin-bottom: 1rem;
         text-align: center;
       }
       ul li:first-child img {
         width: 100%;
-      }
-      ul li:first-child .title {
+      } */
+      /* ul li:first-child .title {
         font-size: 2.369rem;
-      }
+      } */
       ul li img {
         margin-bottom: 0.5rem;
-        border-radius: 12px;
+        border-radius: 0.2rem;
       }
       ul li a {
         display: block;
@@ -61,13 +61,17 @@ const posts = (await getCollection("projects")).sort(
         margin: 0;
         color: rgb(var(--gray));
       }
+      .tagline {
+        margin: 0;
+        color: rgb(var(--gray));
+      }
       ul li a:hover h4,
-      ul li a:hover .date {
+      ul li a:hover .date .tagline {
         color: rgb(var(--accent));
       }
-      ul a:hover img {
+      /* ul a:hover img {
         box-shadow: var(--box-shadow);
-      }
+      } */
 
       @media (max-width: 720px) {
         ul {
@@ -75,7 +79,7 @@ const posts = (await getCollection("projects")).sort(
         }
         ul li {
           width: 100%;
-          text-align: center;
+          /* text-align: center; */
         }
         ul li:first-child {
           margin-bottom: 0;
@@ -97,9 +101,10 @@ const posts = (await getCollection("projects")).sort(
                 <a href={`/projects/${post.id}/`}>
                   <Image src={post.data.heroImage} alt="Project hero image" />
                   <h4 class="title">{post.data.title}</h4>
-                  <p class="date">
+                  <p class="tagline">{post.data.description}</p>
+                  {/* <p class="date">
                     <FormattedDate date={post.data.pubDate} />
-                  </p>
+                  </p> */}
                 </a>
               </li>
             ))

@@ -1,6 +1,6 @@
 ---
-title: "Midwinter Carnival — Creatures of the Deep"
-description: "Assets for carnival projections"
+title: "Midwinter Carnival"
+description: "Undersea assets for projection art"
 pubDate: "Jul 22 2022"
 heroImage: "cotd/header.png"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "The Dojo Stage"
-description: "Stage visuals at Twisted Frequency 2024/25"
+description: "Festival stage video mapping & VJing"
 pubDate: "Dec 27 2024"
 heroImage: dojo/tf25-maze.jpg
 ---

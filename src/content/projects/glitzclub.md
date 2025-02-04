@@ -1,7 +1,7 @@
 ---
 title: "GlitzClub"
-description: "Glitzclub animated video"
-pubDate: "Feb 4 2025"
+description: "Social media reel to announce album"
+pubDate: "Dec 12 2024"
 heroImage: "glitzclub/gc_header.jpg"
 ---
 

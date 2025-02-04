@@ -1,6 +1,6 @@
 ---
 title: "Sigil Sounds"
-description: "Digital promotional content for SIGIL SOUNDS collective"
+description: "Social media promotional content"
 pubDate: "Oct 22 2024"
 heroImage: sigils-high-res-1.webp
 ---
