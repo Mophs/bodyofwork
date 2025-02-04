@@ -13,7 +13,7 @@ In 2023 musician and microscope artist [Peregrin Hyde](https://www.perescope.co.
 
 ## V1, South Georgia
 
-![microphone in use on boat](parabola/Peregrin.png)
+![microphone in use on boat](parabola/peregrin.png)
 _Peregrin Hyde in South Georgia_
 
 From Peregrin's expedition resulted in [Into Ocean & Ice](https://soundcloud.com/peregrinz/into-ocean-and-ice), a soundscape for the [New Zealand Maritime Museum](https://www.maritimemuseum.co.nz/exhibitions/into-ocean-and-ice?gad_source=1)'s exhibition of the same name, as well as [Watching the weather in the far southern seas](https://www.rnz.co.nz/national/programmes/ourchangingworld/audio/2018926815/watching-the-weather-in-the-far-southern-seas) , a podcast for Radio New Zealand's Our Changing world programme.
