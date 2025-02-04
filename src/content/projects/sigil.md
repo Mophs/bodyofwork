@@ -2,7 +2,7 @@
 title: "Sigil Sounds"
 description: "Digital promotional content for SIGIL SOUNDS collective"
 pubDate: "Oct 22 2024"
-heroImage: "/src/content/projects/images/sigils-high-res-1.webp"
+heroImage: "../projects/images/sigils-high-res-1.webp"
 ---
 
 ## The Awakening — Animated Poster
