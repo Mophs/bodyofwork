@@ -1,5 +1,5 @@
 ---
-title: "Sigil Sounds"
+title: "SIGIL Sounds Video"
 description: "Social media promotional content"
 pubDate: "Oct 22 2024"
 heroImage: sigil/sigil_hero.jpg

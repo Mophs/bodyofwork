@@ -1,6 +1,6 @@
 ---
-title: "Parabolic Microphone"
-description: "3D Printed audio recording eqipment"
+title: "3D Printed Parabolic Microphone"
+description: "Custom build speciality audio hardware"
 pubDate: "Jan 5 2025"
 heroImage: "./parabola/722803-max.jpg"
 ---

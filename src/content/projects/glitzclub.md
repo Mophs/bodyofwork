@@ -1,6 +1,6 @@
 ---
 title: "GlitzClub"
-description: "Social media reel to announce album"
+description: "Promotional reel, album announcement animation"
 pubDate: "Dec 12 2024"
 heroImage: "glitzclub/gc_header.jpg"
 ---

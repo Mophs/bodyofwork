@@ -1,5 +1,5 @@
 ---
-title: "Twisted Frequency – DOJO Stage"
+title: "Twisted Frequency Video Installation"
 description: "Festival stage video mapping & VJing"
 pubDate: "Dec 27 2024"
 heroImage: dojo/tf25-maze.jpg
