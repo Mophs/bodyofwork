@@ -3,7 +3,7 @@ const today = new Date();
 ---
 
 <footer>
-  &copy; {today.getFullYear()} Tor Halle-McIntyre. All rights reserved.
+  <!-- &copy; {today.getFullYear()} Tor Halle-McIntyre. All rights reserved. -->
   <div class="social-links">
     <!-- <a href="https://m.webtoo.ls/@astro" target="_blank">
       <span class="sr-only">Follow Astro on Mastodon</span>
@@ -51,10 +51,11 @@ const today = new Date();
 </footer>
 <style>
   footer {
-    padding: 2em 1em 6em 1em;
+    padding: 4em 1em 1em 1em;
     background: linear-gradient(var(--gray-gradient)) no-repeat;
     color: rgb(var(--gray));
     text-align: center;
+    text-size-adjust: 0.5;
   }
   .social-links {
     display: flex;

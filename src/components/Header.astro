@@ -5,21 +5,24 @@ import { SITE_TITLE } from "../consts";
 
 <header>
   <nav>
-    <!-- <h2><a href="/">{SITE_TITLE}</a></h2> -->
-    <div class="nametag">
-      <h2 class="fullname">TOR HALLE-MCINTYRE</h2>
-      <h2 class="shortname">TOR</h2>
-    </div>
-    <div class="internal-links">
-      <HeaderLink href="/">About</HeaderLink>
-      <HeaderLink href="/projects">Projects</HeaderLink>
-    </div>
+    <a href="/">
+      <!-- <h2><a href="/">{SITE_TITLE}</a></h2> -->
+      <div class="nametag">
+        <h2 class="fullname">TOR HALLE-MCINTYRE</h2>
+        <h2 class="shortname">TOR</h2>
+      </div>
+      <div class="internal-links">
+        <HeaderLink href="/">About</HeaderLink>
+        <HeaderLink href="/projects">Projects</HeaderLink>
+      </div>
+    </a>
   </nav>
 </header>
 <style>
   header {
     margin: 0;
     padding: 0 1em;
+
     background: white;
     box-shadow: 0 2px 8px rgba(var(--black), 5%);
     border-bottom: 0.1em solid transparent;
@@ -27,7 +30,6 @@ import { SITE_TITLE } from "../consts";
   }
   h2 {
     margin: 0;
-    font-size: 1em;
   }
 
   h2 a,
@@ -37,6 +39,9 @@ import { SITE_TITLE } from "../consts";
   nav {
     display: flex;
     align-items: center;
+
+    padding: autro;
+
     justify-content: space-between;
   }
   nav a {
@@ -48,6 +53,8 @@ import { SITE_TITLE } from "../consts";
   nav a.active {
     text-decoration: none;
     border-bottom-color: var(--accent);
+  }
+  .header-spacer {
   }
   .internal-links {
     display: flex;
@@ -61,6 +68,8 @@ import { SITE_TITLE } from "../consts";
   }
   .shortname {
     display: none;
+    font-size: 1.6em;
+    font-variant: small-caps;
   }
   .fullname {
     display: block;

@@ -3,22 +3,40 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Image from "astro/components/Image.astro";
+import coverphoto from "../content/decor/towers.png";
+import Gallery from "../components/gallery.astro";
 ---
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
+  <style>
+    .coverphotos {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+  </style>
+
+  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+
   <body>
     <Header />
-    <main>
-      <h1>Design + Tech + Art</h1>
-      <p>
-        Tor Halle-McIntyre is a multi-disciplinary creative spanning traditional
-        crafts, industrial arts and interative digital experiences
-      </p>
-    </main>
+    <div class="container">
+      <main>
+        <h1>Design + Tech + Art</h1>
+        <!-- <Image src={coverphoto} alt="Coverphoto" class="coverphotos" /> -->
+
+        <p>
+          Tor Halle-McIntyre is a multi-disciplinary creative spanning
+          traditional crafts, industrial arts and interative digital experiences
+        </p>
+        <a href="/projects/">Projects</a>
+        <!-- <Gallery /> -->
+      </main>
+    </div>
+
     <Footer />
   </body>
 </html>

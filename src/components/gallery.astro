@@ -1,0 +1,38 @@
+---
+import Image from "astro/components/Image.astro";
+
+const images = await Astro.glob(
+  "../gallery/*.{jpg,JPG,jpeg,png,PNG,webp}"
+).then((files) => {
+  return files.map((file) => file.default); // Map each file to its default export (the src).
+});
+---
+
+<div class="gallery-frame">
+  <div class="gallery-flex">
+    {
+      images.map((img) => (
+        <Image
+          src={img}
+          alt="img"
+          width="1200"
+          height="750"
+          class="gallery-image"
+        />
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .gallery-frame {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+  }
+  .gallery-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+</style>

@@ -23,10 +23,15 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
       .hero-image {
         width: 100%;
+        margin-top: 0.4em;
       }
-      .hero-image img {
+      .img {
+        margin: auto;
+        padding: 0;
+        width: 100%;
+      }
+      .hero-image {
         display: block;
-        margin: 0 auto;
         border-radius: 2px;
         /* box-shadow: var(--box-shadow); */
       }
@@ -60,30 +65,32 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
   <body>
     <Header />
-    <main>
-      <article>
-        <div class="hero-image">
-          {heroImage && <Image src={heroImage} alt="Project hero image" />}
-        </div>
-        <div class="prose">
-          <div class="title">
-            <div class="date">
-              <FormattedDate date={pubDate} />
-              {
-                updatedDate && (
-                  <div class="last-updated-on">
-                    Last updated on <FormattedDate date={updatedDate} />
-                  </div>
-                )
-              }
-            </div>
-            <h1>{title}</h1>
-            <hr />
+    <div class="container">
+      <main>
+        <article>
+          <div class="hero-image">
+            {heroImage && <Image src={heroImage} alt="Project hero image" />}
           </div>
-          <slot />
-        </div>
-      </article>
-    </main>
+          <div class="prose">
+            <div class="title">
+              <div class="date">
+                <FormattedDate date={pubDate} />
+                {
+                  updatedDate && (
+                    <div class="last-updated-on">
+                      Last updated on <FormattedDate date={updatedDate} />
+                    </div>
+                  )
+                }
+              </div>
+              <h1>{title}</h1>
+              <hr />
+            </div>
+            <slot />
+          </div>
+        </article>
+      </main>
+    </div>
     <Footer />
   </body>
 </html>

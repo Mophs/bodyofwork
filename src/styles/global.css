@@ -7,6 +7,9 @@
 :root {
   --accent: #c8c8c8;
   --accent-dark: #898989;
+  --accent-link: #232323;
+  --accent-link-hover: #ab2f2f;
+
   --black: 15, 18, 25;
   --gray: 96, 115, 159;
   --gray-light: 229, 233, 240;
@@ -16,24 +19,27 @@
     0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%);
 }
 body {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   text-align: left;
-  background: linear-gradient(var(--gray-gradient)) no-repeat;
-  background-size: 100% 600px;
+  /* background: linear-gradient(var(--gray-gradient)) no-repeat; */
+  /* background-size: 100% 600px; */
   word-wrap: break-word;
   overflow-wrap: break-word;
   color: rgb(var(--gray-dark));
-  font-size: 20px;
+  /* font-size: 20px; */
+  font-size: calc(1ex / 0.64);
   line-height: calc(1ex / 0.32);
+}
+.container {
+  padding: 0 12vw 0 12vw;
 }
 main {
   width: 100%;
   max-width: calc(100% - 2em);
-  margin: auto;
-  padding: 1em 1em;
+  margin: 0 auto;
+  /* padding: 1em 1em; */
 }
 h1,
 h2,
@@ -50,13 +56,14 @@ article h1 {
   font-size: 2.5em;
   line-height: calc(1ex / 0.42);
 
-  margin: calc(1ex / 0.42) 0;
+  margin: calc(1ex / 0.42);
 }
 
 article h2 {
-  font-size: 2em;
+  font-size: 1.4em;
   line-height: calc(1ex / 0.42);
-  margin: calc(1ex / 0.42) 0;
+  /* margin: calc(1ex / 0.42) 0; */
+  margin: 0;
 }
 
 article h3 {
@@ -74,7 +81,7 @@ article h4 {
 article p {
   font-size: 1em;
   line-height: calc(1ex / 0.32);
-  margin: calc(1ex / 0.32) 0;
+  margin: calc(1ex / 0.64) 0;
   width: 60ch;
   max-width: 100%;
   text-align: left;
@@ -87,10 +94,10 @@ b {
   font-weight: 700;
 }
 a {
-  color: var(--accent);
+  color: var(--accent-link);
 }
 a:hover {
-  color: var(--accent);
+  color: var(--accent-link-hover);
 }
 
 .prose p {
@@ -106,13 +113,14 @@ input {
 table {
   width: 100%;
 }
+
 img {
   max-width: 100%;
 
   height: auto;
   /* max-height: 54vw; */
   /* max-height: 50%; */
-  border-radius: 8px;
+  /* border-radius: 8px; */
 }
 code {
   padding: 2px 5px;
@@ -142,6 +150,9 @@ hr {
   }
   main {
     padding: 1em;
+  }
+  .container {
+    padding: 0 12vw 0 12vw;
   }
 }
 
