@@ -46,6 +46,12 @@ const posts = (await getCollection("projects")).sort(
       /* ul li:first-child .title {
         font-size: 2.369rem;
       } */
+      li {
+        display: flex;
+        flex-direction: row;
+        flex-basis: 30vh;
+        flex-grow: 1;
+      }
       ul li img {
         /* margin-bottom: 0.5rem; */
         /* border-radius: 0.2rem; */
@@ -85,6 +91,8 @@ const posts = (await getCollection("projects")).sort(
       /* .gallery {
         margin: clamp(0em, 3em, 5em);
       } */
+      .card {
+      }
       @media (max-width: 720px) {
         /* .gallery {
           margin: 0 0em;
@@ -115,19 +123,17 @@ const posts = (await getCollection("projects")).sort(
               {
                 posts.map((post) => (
                   <li>
-                    <div class="card">
-                      <a href={`/projects/${post.id}/`}>
-                        <Image
-                          src={post.data.heroImage}
-                          alt="Project hero image"
-                        />
-                        <h4 class="title">{post.data.title}</h4>
-                        <p class="tagline">{post.data.description}</p>
-                        {/* <p class="date">
+                    <a href={`/projects/${post.id}/`}>
+                      <Image
+                        src={post.data.heroImage}
+                        alt="Project hero image"
+                      />
+                      <h4 class="title">{post.data.title}</h4>
+                      <p class="tagline">{post.data.description}</p>
+                      {/* <p class="date">
                       <FormattedDate date={post.data.pubDate} />
                     </p> */}
-                      </a>
-                    </div>
+                    </a>
                   </li>
                 ))
               }

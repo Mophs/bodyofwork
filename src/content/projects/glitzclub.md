@@ -1,8 +1,8 @@
 ---
 title: "GlitzClub"
-description: "Promotional reel, album announcement animation"
+description: "Promotional reel, album announcement"
 pubDate: "Dec 12 2024"
-heroImage: "glitzclub/gc_header.jpg"
+heroImage: "glitzclub/0504_crop.jpg"
 ---
 
 Animated announcement trailer for _Glitzclub's_ compilation album [Merry Glitzmas](https://glitzclub.bandcamp.com/album/merry-glitzmas) — Featuring 59 tracks from artists across Aotearoa New Zealand. Video for social media and supplemental animated loop to accompany posts.

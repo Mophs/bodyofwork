@@ -2,7 +2,7 @@
 title: "SIGIL Sounds Video"
 description: "Social media promotional content"
 pubDate: "Oct 22 2024"
-heroImage: sigil/sigil_hero.jpg
+heroImage: sigil/sigil-banner.jpg
 ---
 
 ## The Awakening — Animated Poster
