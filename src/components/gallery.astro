@@ -1,7 +1,6 @@
 ---
-import Image from "astro/components/Image.astro";
-import { splitToNChunks } from "/src/utilities.js";
-import { callSafely } from "astro:actions";
+import { Image } from "astro:assets";
+
 const imageMatches = import.meta.glob<{ default: ImageMetadata }>(
   "../gallery/dump2/*.{jpg,JPG,jpeg,png,PNG,webp}",
   { eager: true }
