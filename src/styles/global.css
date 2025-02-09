@@ -92,8 +92,8 @@ article h4 {
 article p {
   font-size: 1em;
   line-height: calc(1ex / 0.32);
-  margin: calc(1ex / 0.64) 0;
-  width: 100ch;
+  /* margin: calc(1ex / 0.64) 0; */
+  width: min(60ch, calc(100% - 64px));
   max-width: 100%;
   text-align: left;
   hyphens: auto;

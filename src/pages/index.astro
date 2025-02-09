@@ -17,8 +17,17 @@ import Gallery from "../components/gallery.astro";
       margin-right: auto;
       width: 50%;
     }
+    h1 {
+      padding-top: 1ch;
+      text-align: center;
+      font-variant: small-caps;
+    }
     main {
       padding-top: 1vh;
+      width: 60ch;
+    }
+    .bio {
+      line-height: 1.4rem;
     }
   </style>
 
@@ -28,12 +37,12 @@ import Gallery from "../components/gallery.astro";
     <Header />
     <div class="container">
       <main>
-        <h1>Design + Tech + Art</h1>
+        <h1>DESIGN + TECHNOLOGY + ART</h1>
         <!-- <Image src={coverphoto} alt="Coverphoto" class="coverphotos" /> -->
 
-        <p>
-          Tor Halle-McIntyre is a multi-disciplinary creative spanning
-          traditional crafts, industrial arts and interative digital experiences
+        <p class="bio">
+          Multi-disciplinary creative spanning traditional crafts, industrial
+          arts and interactive digital experiences.
         </p>
         <!-- <a href="/projects/">Projects</a> -->
         <!-- <Gallery /> -->
