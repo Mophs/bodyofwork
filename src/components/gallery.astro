@@ -27,39 +27,45 @@ const c3 = Object.values(imagesColumn3);
   <div class="gallery-flex">
     {
       c1.map((img) => (
-        <Image
-          src={img.default}
-          alt="img"
-          width="1200"
-          height="750"
-          class="gallery-image"
-        />
+        <a href={img.default.src}>
+          <Image
+            src={img.default}
+            alt="gallery image"
+            width="1200"
+            height="750"
+            class="gallery-image"
+          />
+        </a>
       ))
     }
   </div>
   <div class="gallery-flex">
     {
       c2.map((img) => (
-        <Image
-          src={img.default}
-          alt="img"
-          width="1200"
-          height="750"
-          class="gallery-image"
-        />
+        <a href={img.default.src}>
+          <Image
+            src={img.default}
+            alt="gallery image"
+            width="1200"
+            height="750"
+            class="gallery-image"
+          />
+        </a>
       ))
     }
   </div>
   <div class="gallery-flex">
     {
       c3.map((img) => (
-        <Image
-          src={img.default}
-          alt="img"
-          width="1200"
-          height="750"
-          class="gallery-image"
-        />
+        <a href={img.default.src}>
+          <Image
+            src={img.default}
+            alt="gallery image"
+            width="1200"
+            height="750"
+            class="gallery-image"
+          />
+        </a>
       ))
     }
   </div>
