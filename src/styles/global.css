@@ -32,7 +32,7 @@ body {
   overflow-wrap: break-word;
   color: rgb(var(--gray-dark));
   /* font-size: 20px; */
-  font-size: calc(1ex / 0.64);
+  font-size: calc(1ex / 0.44);
   line-height: calc(1ex / 0.32);
 }
 .container {
@@ -110,6 +110,7 @@ b {
 a {
   color: var(--accent-link);
 }
+
 a:hover {
   color: var(--accent-link-hover);
 }

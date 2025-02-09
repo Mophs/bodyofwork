@@ -1,5 +1,7 @@
 ---
 const today = new Date();
+import { Image } from "astro:assets";
+import footerimage from "../content/decor/site-footer.png";
 ---
 
 <footer>
@@ -48,6 +50,7 @@ const today = new Date();
       >
     </a> -->
   </div>
+  <Image src={footerimage} alt="Chalice" class="footer-image" />
 </footer>
 <style>
   footer {
@@ -55,7 +58,6 @@ const today = new Date();
     background: linear-gradient(var(--gray-gradient)) no-repeat;
     color: rgb(var(--gray));
     text-align: center;
-    text-size-adjust: 0.5;
   }
   .social-links {
     display: flex;
@@ -69,5 +71,11 @@ const today = new Date();
   }
   .social-links a:hover {
     color: rgb(var(--gray-dark));
+  }
+  .footer-image {
+    width: 40vw;
+  }
+  footer-image:hover {
+    width: 50vw;
   }
 </style>
