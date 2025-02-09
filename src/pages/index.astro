@@ -4,7 +4,9 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
-import coverphoto from "../content/decor/towers.png";
+import coverphoto from "../content/decor/landingpage-image.jpg";
+import coverphotoSVG from "../content/decor/svg-cover-scroll.svg";
+
 import Gallery from "../components/gallery.astro";
 ---
 
@@ -15,7 +17,7 @@ import Gallery from "../components/gallery.astro";
       display: block;
       margin-left: auto;
       margin-right: auto;
-      width: 50%;
+      width: 100%;
     }
     h1 {
       padding-top: 1ch;
@@ -37,8 +39,9 @@ import Gallery from "../components/gallery.astro";
     <Header />
     <div class="container">
       <main>
+        <Image src={coverphotoSVG} alt="Coverphoto" class="coverphotos" />
+
         <h1>DESIGN + TECHNOLOGY + ART</h1>
-        <!-- <Image src={coverphoto} alt="Coverphoto" class="coverphotos" /> -->
 
         <p class="bio">
           Multi-disciplinary creative spanning traditional crafts, industrial

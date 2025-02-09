@@ -4,28 +4,26 @@ import { SITE_TITLE } from "../consts";
 ---
 
 <header>
-  <div class="container">
-    <nav>
-      <a href="/" class="name-title">
-        <!-- <h2><a href="/">{SITE_TITLE}</a></h2> -->
-        <div class="nametag">
-          <h2 class="fullname">TOR HALLE-MCINTYRE</h2>
-          <h2 class="shortname">TOR</h2>
-        </div>
-        <div class="internal-links">
-          <HeaderLink href="/">About</HeaderLink>
-          <HeaderLink href="/projects">Projects</HeaderLink>
-          <HeaderLink href="/archive">Archive</HeaderLink>
-        </div>
-      </a>
-    </nav>
-  </div>
+  <nav>
+    <a href="/" class="name-title">
+      <!-- <h2><a href="/">{SITE_TITLE}</a></h2> -->
+      <div class="nametag">
+        <h2 class="fullname">TOR HALLE-MCINTYRE</h2>
+        <h2 class="shortname">TOR</h2>
+      </div>
+      <div class="internal-links">
+        <HeaderLink href="/">About</HeaderLink>
+        <HeaderLink href="/projects">Projects</HeaderLink>
+        <HeaderLink href="/archive">Archive</HeaderLink>
+      </div>
+    </a>
+  </nav>
 </header>
 <style>
   header {
     margin: 0;
-    padding: 0 1em;
-
+    padding: 0 2em;
+    padding-top: 1ch;
     background: white;
     box-shadow: 0 2px 8px rgba(var(--black), 5%);
     border-bottom: 0.1em solid transparent;
@@ -44,12 +42,11 @@ import { SITE_TITLE } from "../consts";
   }
   nav {
     display: flex;
-
+    padding: 0 min(1rem, calc(100% - 64px));
     justify-content: left;
-    gap: 1%;
   }
   nav a {
-    padding: 4em 0.5em;
+    /* padding: 4em 0.5em; */
     color: var(--black);
     border-bottom: 4px solid transparent;
     text-decoration: none;
@@ -66,6 +63,7 @@ import { SITE_TITLE } from "../consts";
   }
   .internal-links {
     display: flex;
+    gap: 1ch;
   }
   .social-links,
   .social-links a {
@@ -87,7 +85,7 @@ import { SITE_TITLE } from "../consts";
       display: none;
     }
   }
-  @media (max-width: 300px) {
+  @media (max-width: 500px) {
     .shortname {
       display: block;
     }
