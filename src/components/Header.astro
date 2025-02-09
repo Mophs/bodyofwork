@@ -4,19 +4,21 @@ import { SITE_TITLE } from "../consts";
 ---
 
 <header>
-  <nav>
-    <a href="/">
-      <!-- <h2><a href="/">{SITE_TITLE}</a></h2> -->
-      <div class="nametag">
-        <h2 class="fullname">TOR HALLE-MCINTYRE</h2>
-        <h2 class="shortname">TOR</h2>
-      </div>
-      <div class="internal-links">
-        <HeaderLink href="/">About</HeaderLink>
-        <HeaderLink href="/projects">Projects</HeaderLink>
-      </div>
-    </a>
-  </nav>
+  <div class="container">
+    <nav>
+      <a href="/">
+        <!-- <h2><a href="/">{SITE_TITLE}</a></h2> -->
+        <div class="nametag">
+          <h2 class="fullname">TOR HALLE-MCINTYRE</h2>
+          <h2 class="shortname">TOR</h2>
+        </div>
+        <div class="internal-links">
+          <HeaderLink href="/">About</HeaderLink>
+          <HeaderLink href="/projects">Projects</HeaderLink>
+        </div>
+      </a>
+    </nav>
+  </div>
 </header>
 <style>
   header {
@@ -40,7 +42,7 @@ import { SITE_TITLE } from "../consts";
     display: flex;
     align-items: center;
 
-    padding: autro;
+    padding: auto;
 
     justify-content: space-between;
   }

@@ -16,6 +16,9 @@ const posts = (await getCollection("projects")).sort(
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     <style>
+      :root {
+        --gaps: 1vw;
+      }
       main {
         /* width: 90%; */
       }
@@ -23,7 +26,7 @@ const posts = (await getCollection("projects")).sort(
         display: flex;
         flex-wrap: wrap;
         flex-basis: auto;
-        gap: 2rem;
+        gap: var(--gaps);
         list-style-type: none;
         margin: 0rem;
         padding: 0;
@@ -48,8 +51,8 @@ const posts = (await getCollection("projects")).sort(
       } */
       li {
         display: flex;
-        flex-direction: row;
-        flex-basis: 30vh;
+        flex-direction: column;
+        /* flex-basis: 30vh; */
         flex-grow: 1;
       }
       ul li img {
@@ -60,10 +63,12 @@ const posts = (await getCollection("projects")).sort(
         display: block;
       }
       .title {
+        padding-top: 0.2em;
         margin: 0;
         color: rgb(var(--black));
         line-height: 1;
         font-weight: lighter;
+        font-size: 1.6em;
       }
       .date {
         margin: 0;
@@ -71,10 +76,13 @@ const posts = (await getCollection("projects")).sort(
       }
       .tagline {
         margin: 0;
+        padding-top: 0.8em;
+        padding-bottom: 0.2em;
         color: rgb(var(--gray));
         font-size: small;
         font-weight: lighter;
-        font-variant: small-caps;
+        /* font-variant: small-caps; */
+        font-style: italic;
         line-height: normal;
       }
       ul li a:hover h4,
@@ -94,11 +102,15 @@ const posts = (await getCollection("projects")).sort(
       .card {
       }
       @media (max-width: 720px) {
-        /* .gallery {
-          margin: 0 0em;
-        } */
+        .tagline {
+          padding-top: 0.6em;
+          padding-bottom: 0.6em;
+        }
+        .title {
+          font-size: 1.4em;
+        }
         ul {
-          gap: 0.5em;
+          gap: var(--gaps);
         }
         ul li {
           width: 100%;

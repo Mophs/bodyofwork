@@ -1,6 +1,6 @@
 ---
-title: "3D Printed Parabolic Microphone"
-description: "Custom build speciality audio hardware"
+title: "Parabolic Microphone"
+description: "Custom built audio gear in Antarctica"
 pubDate: "Jan 5 2025"
 heroImage: "./parabola/722803-max.jpg"
 ---

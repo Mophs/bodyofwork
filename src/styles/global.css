@@ -10,6 +10,8 @@
   --accent-link: #232323;
   --accent-link-hover: #ab2f2f;
 
+  --padding-sides: 12vw;
+
   --black: 15, 18, 25;
   --gray: 96, 115, 159;
   --gray-light: 229, 233, 240;
@@ -33,7 +35,14 @@ body {
   line-height: calc(1ex / 0.32);
 }
 .container {
-  padding: 0 12vw 0 12vw;
+  padding: 0 var(--padding-sides) 0 var(--padding-sides);
+}
+.sidebyside-container {
+  display: flex;
+  flex-basis: 0%;
+}
+.sidebyside-item {
+  width: 100%;
 }
 main {
   width: 100%;
@@ -82,13 +91,17 @@ article p {
   font-size: 1em;
   line-height: calc(1ex / 0.32);
   margin: calc(1ex / 0.64) 0;
-  width: 60ch;
+  width: 100ch;
   max-width: 100%;
   text-align: left;
   hyphens: auto;
   text-wrap: pretty;
 }
-
+video {
+  width: 60ch;
+  padding: auto;
+  text-align: center;
+}
 strong,
 b {
   font-weight: 700;
@@ -153,6 +166,9 @@ hr {
   }
   .container {
     padding: 0 12vw 0 12vw;
+  }
+  article p {
+    width: 80ch;
   }
 }
 

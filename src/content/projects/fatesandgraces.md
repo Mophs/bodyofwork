@@ -1,6 +1,6 @@
 ---
-title: "Fates & Graces Dance Art Direction"
-description: "Dance piece, artistic support and photography"
+title: "Fates & Graces Dance"
+description: "A performance piece, artistic support and photography"
 pubDate: "Oct 1 2022"
 heroImage: "/src/content/projects/fatesandgraces/crouching_header_2x1_103CANON_IMG_0082.jpg"
 ---
