@@ -11,12 +11,6 @@ import Gallery from "../components/gallery.astro";
 <!doctype html>
 <html lang="en">
   <style>
-    .coverphotos {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 50%;
-    }
     main {
       padding-top: 1vh;
     }
@@ -25,20 +19,17 @@ import Gallery from "../components/gallery.astro";
   <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 
   <body>
+    <style></style>
     <Header />
     <div class="container">
       <main>
-        <h1>Design + Tech + Art</h1>
-        <!-- <Image src={coverphoto} alt="Coverphoto" class="coverphotos" /> -->
+        <h2>Gallery Component</h2>
 
-        <p>
-          Tor Halle-McIntyre is a multi-disciplinary creative spanning
-          traditional crafts, industrial arts and interative digital experiences
-        </p>
-        <a href="/projects/">Projects</a>
-        <!-- <Gallery /> -->
+        <Gallery />
       </main>
     </div>
+
+    <h2>Gallery Component End</h2>
 
     <Footer />
   </body>

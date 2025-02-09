@@ -11,6 +11,7 @@
   --accent-link-hover: #ab2f2f;
 
   --padding-sides: 12vw;
+  --padding-topbot: 0;
 
   --black: 15, 18, 25;
   --gray: 96, 115, 159;
@@ -35,7 +36,8 @@ body {
   line-height: calc(1ex / 0.32);
 }
 .container {
-  padding: 0 var(--padding-sides) 0 var(--padding-sides);
+  padding: var(--padding-topbot) var(--padding-sides) var(--padding-topbot)
+    var(--padding-sides);
 }
 .sidebyside-container {
   display: flex;
@@ -95,11 +97,10 @@ article p {
   max-width: 100%;
   text-align: left;
   hyphens: auto;
-  text-wrap: pretty;
 }
 video {
   width: 60ch;
-  padding: auto;
+
   text-align: center;
 }
 strong,

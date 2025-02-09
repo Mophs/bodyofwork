@@ -1,19 +1,61 @@
 ---
 import Image from "astro/components/Image.astro";
-
-const images = await Astro.glob(
-  "../gallery/*.{jpg,JPG,jpeg,png,PNG,webp}"
-).then((files) => {
-  return files.map((file) => file.default); // Map each file to its default export (the src).
-});
+import { splitToNChunks } from "/src/utilities.js";
+import { callSafely } from "astro:actions";
+const imageMatches = import.meta.glob<{ default: ImageMetadata }>(
+  "../gallery/dump2/*.{jpg,JPG,jpeg,png,PNG,webp}",
+  { eager: true }
+);
+const imagesColumn1 = import.meta.glob<{ default: ImageMetadata }>(
+  "../gallery/column1/*.{jpg,JPG,jpeg,png,PNG,webp}",
+  { eager: true }
+);
+const imagesColumn2 = import.meta.glob<{ default: ImageMetadata }>(
+  "../gallery/column2/*.{jpg,JPG,jpeg,png,PNG,webp}",
+  { eager: true }
+);
+const imagesColumn3 = import.meta.glob<{ default: ImageMetadata }>(
+  "../gallery/column3/*.{jpg,JPG,jpeg,png,PNG,webp}",
+  { eager: true }
+);
+const c1 = Object.values(imagesColumn1);
+const c2 = Object.values(imagesColumn2);
+const c3 = Object.values(imagesColumn3);
 ---
 
 <div class="gallery-frame">
+  <!--  -->
   <div class="gallery-flex">
     {
-      images.map((img) => (
+      c1.map((img) => (
         <Image
-          src={img}
+          src={img.default}
+          alt="img"
+          width="1200"
+          height="750"
+          class="gallery-image"
+        />
+      ))
+    }
+  </div>
+  <div class="gallery-flex">
+    {
+      c2.map((img) => (
+        <Image
+          src={img.default}
+          alt="img"
+          width="1200"
+          height="750"
+          class="gallery-image"
+        />
+      ))
+    }
+  </div>
+  <div class="gallery-flex">
+    {
+      c3.map((img) => (
+        <Image
+          src={img.default}
           alt="img"
           width="1200"
           height="750"
@@ -25,14 +67,31 @@ const images = await Astro.glob(
 </div>
 
 <style>
+  :root {
+    --gallery-gaps: 0.2em;
+  }
   .gallery-frame {
-    width: 100%;
-    max-width: 500px;
-    margin: auto;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: row;
+
+    gap: var(--gallery-gaps);
+    justify-content: center;
+    padding: 0%;
   }
   .gallery-flex {
     display: flex;
+    flex-shrink: 1;
+    flex-basis: calc(100vw / 3);
     flex-direction: column;
-    gap: 0.2rem;
+    gap: var(--gallery-gaps);
+  }
+  @media (max-width: 520px) {
+    .gallery-flex {
+      /* width: 100%; */
+    }
+    .gallery-frame {
+      flex-direction: column;
+    }
   }
 </style>
