@@ -31,7 +31,7 @@ We reduced the number and type of fixtures needed to assemble the dish. Standard
 
 Our original handle was made of wood and vertical which was compact and light. To meet biosecurity limitations on organics entering Antarctica and make handling the dish for extended periods more ergonomic we rebuilt our handle around 2 horizontal rods. This preserved modularity and packability and gave the operator greater control. The parabolic dish narrows the recording area to a fine point which can require fine motions to aim and adjust.
 
-![detail view](parabola/v2_mid_back.PNG)
+![detail view](parabola/v2_mid_back.jpg)
 
 Antarctic winds made handling noise on the first model an issue. Our second model has a cutout to support the microphone cable and areas for velcro straps to tie down any excess cable length.
 
