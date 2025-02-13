@@ -1,6 +1,6 @@
 ---
 title: "Fates & Graces Dance"
-description: "A performance piece, artistic support and photography"
+description: "Providing technical & artistic support for a dance piece"
 pubDate: "Oct 1 2022"
 heroImage: "/src/content/projects/fatesandgraces/crouching_header_2x1_103CANON_IMG_0082.jpg"
 ---

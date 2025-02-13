@@ -7,9 +7,9 @@ import { SITE_TITLE } from "../consts";
   <nav>
     <a href="/" class="name-title">
       <!-- <h2><a href="/">{SITE_TITLE}</a></h2> -->
-      <div class="nametag">
-        <h2 class="fullname">TOR HALLE-MCINTYRE</h2>
-        <h2 class="shortname">TOR</h2>
+      <div class="nametag custom-font">
+        <h2 class="fullname">Tor Halle-McIntyre</h2>
+        <h2 class="shortname">Tor</h2>
       </div>
       <div class="internal-links">
         <HeaderLink href="/">About</HeaderLink>
@@ -72,20 +72,20 @@ import { SITE_TITLE } from "../consts";
   .nametag {
     display: flex;
   }
-  .shortname {
-    display: none;
-    font-size: 1.6em;
-    font-variant: small-caps;
-  }
   .fullname {
     display: block;
+  }
+  .shortname {
+    display: none;
+    /* font-size: 1.6em; */
+    /* font-variant: small-caps; */
   }
   @media (max-width: 720px) {
     .social-links {
       display: none;
     }
   }
-  @media (max-width: 500px) {
+  @media (max-width: 50ch) {
     .shortname {
       display: block;
     }

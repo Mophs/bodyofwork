@@ -1,6 +1,6 @@
 ---
 title: "Twisted Frequency Video Installation"
-description: "Festival stage video mapping & VJing"
+description: "Mapping screens for a music festival stage & doing stage visuals"
 pubDate: "Dec 27 2024"
 heroImage: dojo/tf25-maze.jpg
 ---

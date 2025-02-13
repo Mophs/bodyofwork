@@ -17,7 +17,7 @@ const posts = (await getCollection("projects")).sort(
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     <style>
       :root {
-        --gaps: 1vw;
+        --gaps: 3%;
       }
       main {
         /* width: 90%; */
@@ -33,6 +33,7 @@ const posts = (await getCollection("projects")).sort(
       }
       ul li {
         width: calc(50% - 1rem);
+        padding-bottom: 1.4rem;
       }
       ul li * {
         text-decoration: none;
@@ -75,8 +76,8 @@ const posts = (await getCollection("projects")).sort(
       }
       .tagline {
         margin: 0;
-        padding-top: 0.8em;
-        padding-bottom: 0.2em;
+        padding-top: 0.2rem;
+
         color: rgb(var(--gray));
         font-size: small;
         font-weight: lighter;

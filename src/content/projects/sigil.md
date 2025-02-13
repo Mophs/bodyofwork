@@ -1,6 +1,6 @@
 ---
 title: "SIGIL Sounds Video & Poster"
-description: "Social media promotional content"
+description: "Social media content for music event promo"
 pubDate: "Oct 22 2024"
 heroImage: sigil/sigil-banner.jpg
 ---

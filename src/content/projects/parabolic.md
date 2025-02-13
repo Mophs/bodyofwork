@@ -1,6 +1,6 @@
 ---
 title: "Parabolic Microphone"
-description: "Custom built audio gear in Antarctica"
+description: "Custom designed & built audio recording gear in Antarctica"
 pubDate: "Jan 5 2025"
 heroImage: "./parabola/722803-max.jpg"
 ---

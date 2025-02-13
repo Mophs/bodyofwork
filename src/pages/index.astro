@@ -30,6 +30,13 @@ import Gallery from "../components/gallery.astro";
     }
     .bio {
       line-height: 1.4rem;
+      margin-inline: auto;
+    }
+    .index-header {
+      white-space: nowrap;
+      font-size: calc(min(4vw, 1.5rem));
+    }
+    @media (max-width: 720px) {
     }
   </style>
 
@@ -41,7 +48,7 @@ import Gallery from "../components/gallery.astro";
       <main>
         <Image src={coverphotoSVG} alt="Coverphoto" class="coverphotos" />
 
-        <h1>DESIGN + TECHNOLOGY + ART</h1>
+        <h1 class="index-header">DESIGN + TECHNOLOGY + ART</h1>
 
         <p class="bio">
           Multi-disciplinary creative spanning traditional crafts, industrial
