@@ -5,6 +5,10 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import coverphoto from "../content/decor/landingpage-image.jpg";
+import coverphoto2 from "../content/decor/urn.jpeg";
+
+import footerimage from "../content/decor/site-footer.png";
+
 import coverphotoSVG from "../content/decor/svg-cover-scroll.svg";
 
 import Gallery from "../components/gallery.astro";
@@ -46,7 +50,9 @@ import Gallery from "../components/gallery.astro";
     <Header />
     <div class="container">
       <main>
-        <Image src={coverphotoSVG} alt="Coverphoto" class="coverphotos" />
+        <a href="projects">
+          <Image src={coverphoto} alt="Coverphoto" class="coverphotos" />
+        </a>
 
         <h1 class="index-header">DESIGN + TECHNOLOGY + ART</h1>
 
