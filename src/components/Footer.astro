@@ -8,11 +8,19 @@ import footerSVG from "../content/decor/svg-cover-scroll.svg";
 <footer>
   <!-- <div class="social-links"></div> -->
   <!-- <hr /> -->
-  <a href="/archive">
-    <Image src={footerimage} alt="Footer decoration" class="footer-image bob" />
-    <!-- <Image src={footerSVG} alt="Chalice" class="footer-image" /> -->
-  </a>
-  &copy; {today.getFullYear()} Tor Halle-McIntyre. All rights reserved.
+  <div class="footer-wrapper">
+    <a href="/archive">
+      <Image
+        src={footerimage}
+        alt="Footer decoration"
+        class="footer-image bob"
+      />
+      <!-- <Image src={footerSVG} alt="Chalice" class="footer-image" /> -->
+    </a>
+    <div class="copy">
+      &copy; {today.getFullYear()} Tor Halle-McIntyre. All rights reserved.
+    </div>
+  </div>
 </footer>
 <style>
   footer {
@@ -42,6 +50,13 @@ import footerSVG from "../content/decor/svg-cover-scroll.svg";
   .footer-image {
     width: 100%;
     filter: drop-shadow(0 0 0.4em var(--gray));
+  }
+  .footer-wrapper {
+    margin: 0 auto;
+    height: 30vh;
+  }
+  .copy {
+    width: 100%;
   }
   /* footer-image:hover {
     width: 50vw;

@@ -32,6 +32,7 @@ const imgillustration = Object.values(ImagesIllustration);
 const imgindustrial = Object.values(ImagesIndustrial);
 ---
 
+<!-- 
 <script>
   document.querySelectorAll("img").forEach((i) => {
     i.addEventListener("click", (evt) => {
@@ -43,7 +44,7 @@ const imgindustrial = Object.values(ImagesIndustrial);
       i.classList.toggle("zoomed");
     });
   });
-</script>
+</script> -->
 <h2>3D</h2>
 <div class="column-gallery-frame">
   {
@@ -77,7 +78,7 @@ const imgindustrial = Object.values(ImagesIndustrial);
     ))
   }
 </div>
-
+<!-- <hr /> -->
 <h2>Industrial Design</h2>
 <div class="column-gallery-frame">
   {
@@ -104,9 +105,11 @@ const imgindustrial = Object.values(ImagesIndustrial);
   .column-gallery-frame {
     margin: 0 auto;
     margin-top: 1em;
-    width: min(1200px, 100%);
+    /* width: min(1200px, 100%); */
     /* columns: var(--gallery-columns) 10em; */
-    column-width: min(calc(100vw / 5), 300px);
+    /* column-width: min(calc(100vw / 5), 300px); */
+    /* columns: 4 30%; */
+    column-count: 5;
     column-gap: var(--gallery-gaps);
   }
   .column-gallery-image {
@@ -120,13 +123,24 @@ const imgindustrial = Object.values(ImagesIndustrial);
     -webkit-transition-duration: 0.3s;
     -webkit-transition-timing-function: ease;
   }
-  img.zoomed {
+
+  hr {
+    margin: 2em auto;
+    width: 60%;
+    color: var(--accent);
+  }
+  @media (max-width: 720px) {
+    .column-gallery-frame {
+      column-count: 3;
+    }
+  }
+  /* img.zoomed {
     cursor: zoom-out;
   }
   img {
     transition: transform 0.25s ease;
     cursor: zoom-in;
-  }
+  } */
   /* .column-gallery-image:hover {
     transform: scale(2);
     transform-origin: top left;

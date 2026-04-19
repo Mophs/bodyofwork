@@ -91,7 +91,7 @@ body {
   padding: var(--padding-topbot) var(--padding-sides) var(--padding-topbot)
     var(--padding-sides);
   /* border: 2px dotted blue; */
-  margin: 0 auto;
+  margin: 0 min(auto, 30px);
 }
 .sidebyside-container {
   display: flex;
@@ -246,9 +246,11 @@ hr {
   main {
     padding: 1em;
   }
-  .container {
-    padding: 0 12vw 0 12vw;
-  }
+  /* .container {
+    padding: 0 12vw 0 12vw; 
+    margin: 0 auto; 
+     outline: 1px dotted red; 
+  } */
   article p {
     width: 80ch;
   }
