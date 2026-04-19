@@ -1,0 +1,135 @@
+---
+import { propsToFilename } from "astro/assets";
+import { Image } from "astro:assets";
+
+const imageMatches = import.meta.glob<{ default: ImageMetadata }>(
+  "../gallery/dump2/*.{jpg,JPG,jpeg,png,PNG,webp}",
+  { eager: true },
+);
+
+const imagesColumn1 = import.meta.glob<{ default: ImageMetadata }>(
+  "../gallery/column1/*.{jpg,JPG,jpeg,png,PNG,webp}",
+  { eager: true },
+);
+
+const Images3D = import.meta.glob<{ default: ImageMetadata }>(
+  "../gallery/3d/*.{jpg,JPG,jpeg,png,PNG,webp}",
+  { eager: true },
+);
+
+const ImagesIllustration = import.meta.glob<{ default: ImageMetadata }>(
+  "../gallery/illustration/*.{jpg,JPG,jpeg,png,PNG,webp}",
+  { eager: true },
+);
+
+const ImagesIndustrial = import.meta.glob<{ default: ImageMetadata }>(
+  "../gallery/industrial/*.{jpg,JPG,jpeg,png,PNG,webp}",
+  { eager: true },
+);
+const c1 = Object.values(Images3D);
+const img3d = Object.values(Images3D);
+const imgillustration = Object.values(ImagesIllustration);
+const imgindustrial = Object.values(ImagesIndustrial);
+---
+
+<script>
+  document.querySelectorAll("img").forEach((i) => {
+    i.addEventListener("click", (evt) => {
+      if (i.classList.contains("zoomed")) i.style.transform = "";
+      else {
+        const myScale = 500 / i.clientWidth;
+        i.style.transform = `scale(${myScale})`;
+      }
+      i.classList.toggle("zoomed");
+    });
+  });
+</script>
+<h2>3D</h2>
+<div class="column-gallery-frame">
+  {
+    img3d.map((img) => (
+      // <a href={img.default.src}>
+      <Image
+        src={img.default}
+        alt=""
+        width={img.default.width}
+        height={img.default.height}
+        class="column-gallery-image"
+      />
+      // </a>
+    ))
+  }
+</div>
+
+<h2>Illustration</h2>
+<div class="column-gallery-frame">
+  {
+    imgillustration.map((img) => (
+      // <a href={img.default.src}>
+      <Image
+        src={img.default}
+        alt=""
+        width={img.default.width}
+        height={img.default.height}
+        class="column-gallery-image"
+      />
+      // </a>
+    ))
+  }
+</div>
+
+<h2>Industrial Design</h2>
+<div class="column-gallery-frame">
+  {
+    imgindustrial.map((img) => (
+      // <a href={img.default.src}>
+      <Image
+        src={img.default}
+        alt=""
+        width={img.default.width}
+        height={img.default.height}
+        class="column-gallery-image"
+      />
+      // </a>
+    ))
+  }
+</div>
+
+<style>
+  :root {
+    --gallery-gaps: 0.2em;
+    --gallery-card-width: calc(30vw - var(var(--gallery-gaps)));
+    --gallery-columns: 5; /* calc(vw / var(--gallery-card-width)); */
+  }
+  .column-gallery-frame {
+    margin: 0 auto;
+    margin-top: 1em;
+    width: min(1200px, 100%);
+    /* columns: var(--gallery-columns) 10em; */
+    column-width: min(calc(100vw / 5), 300px);
+    column-gap: var(--gallery-gaps);
+  }
+  .column-gallery-image {
+    display: block;
+    line-height: var(--gallery-gaps);
+    margin-bottom: var(--gallery-gaps);
+    width: 100%;
+    height: 100%;
+    zindex: 100;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+  }
+  img.zoomed {
+    cursor: zoom-out;
+  }
+  img {
+    transition: transform 0.25s ease;
+    cursor: zoom-in;
+  }
+  /* .column-gallery-image:hover {
+    transform: scale(2);
+    transform-origin: top left;
+    z-index: 200;
+  } */
+</style>

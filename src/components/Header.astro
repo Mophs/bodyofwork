@@ -1,33 +1,41 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
-import { SITE_TITLE } from "../consts";
+import { SITE_TITLE, BLOG_ENABLED } from "../consts";
 ---
 
-<header>
+<header transition:animate="fade">
   <nav>
     <a href="/" class="name-title">
       <!-- <h2><a href="/">{SITE_TITLE}</a></h2> -->
+
       <div class="nametag custom-font">
         <h2 class="fullname">Tor Halle-McIntyre</h2>
         <h2 class="shortname">Tor</h2>
       </div>
-      <div class="internal-links">
-        <HeaderLink href="/">About</HeaderLink>
-        <HeaderLink href="/projects">Projects</HeaderLink>
-        <HeaderLink href="/archive">Archive</HeaderLink>
-      </div>
     </a>
+
+    <div class="internal-links header-links">
+      <HeaderLink href="/">About</HeaderLink>
+      <HeaderLink href="/projects">Projects</HeaderLink>
+      {BLOG_ENABLED ? <HeaderLink href="/blog">Blog</HeaderLink> : ""}
+      <HeaderLink href="/archive">Gallery</HeaderLink>
+    </div>
   </nav>
 </header>
 <style>
   header {
     margin: 0;
-    padding: 0 2em;
+    margin-bottom: 1em;
+    padding: 0 min(2em, 0);
     padding-top: 1ch;
     background: white;
+    background-color: var(--background-colour);
     box-shadow: 0 2px 8px rgba(var(--black), 5%);
     border-bottom: 0.1em solid transparent;
     border-bottom-color: var(--accent);
+    min-height: 7ch;
+    align-content: center;
+    filter: drop-shadow(0 0 0.75rem black);
   }
   .container {
   }
@@ -58,12 +66,14 @@ import { SITE_TITLE } from "../consts";
   }
   .name-title {
     margin-right: auto;
+    font-size: larger;
   }
   .header-spacer {
   }
   .internal-links {
     display: flex;
     gap: 1ch;
+    margin-right: 4em;
   }
   .social-links,
   .social-links a {

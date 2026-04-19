@@ -3,7 +3,7 @@
 // all pages through the use of the <BaseHead /> component.
 import "../styles/global.css";
 import { SITE_TITLE } from "../consts";
-
+import { ClientRouter } from "astro:transitions";
 interface Props {
   title: string;
   description: string;
@@ -27,6 +27,7 @@ const { title, description, image = "/thumbnail.jpeg" } = Astro.props;
   href={new URL("rss.xml", Astro.site)}
 />
 <meta name="generator" content={Astro.generator} />
+<ClientRouter />
 
 <!-- Font preloads -->
 <!-- <link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin />

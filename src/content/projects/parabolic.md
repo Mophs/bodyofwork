@@ -5,9 +5,8 @@ pubDate: "Jan 5 2025"
 heroImage: "./parabola/722803-max.jpg"
 ---
 
-![CAD render, front view, dish made of segments](parabola/parabola_cad_webedit.png)
-
 Parabolic microphones are used to collect and amplify sound at distance. In collaboration with Jed Prickett this 3D printed paraboloid was built to support Jed's ecological and musical pursuits.
+![CAD render, front view, dish made of segments](parabola/parabola_cad_webedit.png)
 
 In 2023 musician and microscope artist [Peregrin Hyde](https://www.perescope.co.nz/) brought our first prototype to South Georgia as part of an [Antarctica Heritage Trust](https://antarctic-heritage.recollect.co.nz/) expedition where he made recordings of wildlife and sea ice movements.
 

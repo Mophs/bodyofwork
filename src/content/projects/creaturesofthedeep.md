@@ -1,6 +1,6 @@
 ---
-title: "Midwinter Carnival Projection Art"
-description: "Creating underwater themed 3d assets for event art installation"
+title: "Midwinter Carnival"
+description: "Projection art – 3D asset creation"
 pubDate: "Jul 22 2022"
 heroImage: "cotd/header.png"
 ---

@@ -5,7 +5,9 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
+import Placeholder from "/src/content/decor/footer.jpg";
 
+import type { ImageFunction } from "astro:content";
 type Props = CollectionEntry<"projects">["data"];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
@@ -15,6 +17,9 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
   <head>
     <BaseHead title={title} description={description} />
     <style>
+      body {
+        color: var(--text-colour);
+      }
       main {
         width: calc(100% - 2em);
         max-width: 100%;
@@ -44,7 +49,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
         max-width: calc(100% - 2em);
         margin: auto;
         padding: 1em;
-        color: rgb(var(--gray-dark));
+        /* color: rgb(var(--gray-dark)); */
       }
       .title {
         margin-bottom: 1em;
@@ -58,7 +63,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
       }
       .date {
         margin-bottom: 0.5em;
-        color: rgb(var(--gray));
+        /* color: rgb(var(--gray)); */
       }
       .last-updated-on {
         font-style: italic;
@@ -68,33 +73,47 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 
   <body>
     <Header />
-    <div class="container">
-      <main>
-        <article>
-          <div class="hero-image">
-            {heroImage && <Image src={heroImage} alt="Project hero image" />}
-          </div>
-          <div class="prose">
-            <div class="title">
-              <div class="date">
-                <FormattedDate date={pubDate} />
+    <div class="wrapper">
+      <div class="container">
+        <main>
+          <article>
+            <div class="blog-post-hero-crop">
+              <div class="hero-image">
                 {
-                  updatedDate && (
-                    <div class="last-updated-on">
-                      Last updated on <FormattedDate date={updatedDate} />
-                    </div>
+                  heroImage && (
+                    <Image
+                      src={heroImage ? heroImage : Placeholder}
+                      alt="Project hero image"
+                    />
                   )
                 }
               </div>
-              <h1>{title}</h1>
-              <hr />
             </div>
-            <div class="wrapper">
+
+            <div class="prose">
+              <div class="title">
+                <h1>{title}</h1>
+                <div class="date">
+                  <FormattedDate date={pubDate} />
+                  {
+                    updatedDate && (
+                      <div class="last-updated-on">
+                        Last updated on <FormattedDate date={updatedDate} />
+                      </div>
+                    )
+                  }
+                </div>
+                <hr />
+              </div>
+
               <slot />
             </div>
-          </div>
-        </article>
-      </main>
+          </article>
+          <!-- <button onclick="topFunction()" id="myBtn" title="Go to top"
+            >Top</button
+          > -->
+        </main>
+      </div>
     </div>
     <Footer />
   </body>

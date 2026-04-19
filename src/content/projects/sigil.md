@@ -1,17 +1,17 @@
 ---
-title: "SIGIL Sounds Video & Poster"
-description: "Social media content for music event promo"
+title: "SIGIL"
+description: "Music events – Promo animation & posters"
 pubDate: "Oct 22 2024"
 heroImage: sigil/sigil-banner.jpg
 ---
 
 ## The Awakening — Animated Poster
 
-![Frame from Sigils animated poster](../projects/sigil/sigil_poster.jpg)
+<video controls preload src="/videos/sigil_lightmode_final_VP9.webm" type="video/webm" width="512" poster="/videos/sigil_poster.jpg" ></video>
 
 The Awakening is a 28 second animation to announce and promote Sigil Sounds spring music event. Created as an "animated poster" for social media stories/reels it also provided the visual material for printed billsticker posters. The instagram post was a success, boosting accounts reached by 118%.
 
-<video controls preload src="/videos/sigil_lightmode_final.webm" type="video/webm" width="512" poster="/videos/sigil_poster.jpg" ></video>
+![Frame from Sigils animated poster](../projects/sigil/sigil_poster.jpg)
 
 ## Tiles
 

@@ -1,23 +1,30 @@
 ---
 const today = new Date();
 import { Image } from "astro:assets";
-import footerimage from "../content/decor/site-footer.png";
+import footerimage from "../content/decor/3d_footer.png";
 import footerSVG from "../content/decor/svg-cover-scroll.svg";
 ---
 
 <footer>
-  <!-- &copy; {today.getFullYear()} Tor Halle-McIntyre. All rights reserved. -->
-  <div class="social-links"></div>
-  <hr />
-  <!-- <Image src={footerimage} alt="Chalice" class="footer-image" /> -->
-  <Image src={footerSVG} alt="Chalice" class="footer-image" />
+  <!-- <div class="social-links"></div> -->
+  <!-- <hr /> -->
+  <a href="/archive">
+    <Image src={footerimage} alt="Footer decoration" class="footer-image bob" />
+    <!-- <Image src={footerSVG} alt="Chalice" class="footer-image" /> -->
+  </a>
+  &copy; {today.getFullYear()} Tor Halle-McIntyre. All rights reserved.
 </footer>
 <style>
   footer {
     padding: 2em 1em 1em 1em;
+    margin: 0 auto;
+    width: 40%;
     /* background: linear-gradient(var(--gray-gradient)) no-repeat; */
     /* color: rgb(var(--gray)); */
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .social-links {
     display: flex;
@@ -33,11 +40,12 @@ import footerSVG from "../content/decor/svg-cover-scroll.svg";
     color: rgb(var(--gray-dark));
   }
   .footer-image {
-    width: 40ch;
+    width: 100%;
+    filter: drop-shadow(0 0 0.4em var(--gray));
   }
-  footer-image:hover {
+  /* footer-image:hover {
     width: 50vw;
-  }
+  } */
 </style>
 <!-- 
  <a href="https://m.webtoo.ls/@astro" target="_blank">

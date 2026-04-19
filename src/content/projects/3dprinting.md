@@ -1,7 +1,7 @@
 ---
 title: "3D Printing"
 description: "Explorations in 3D Printing"
-pubDate: "Feb 19 2025"
+pubDate: "Feb 19 2024"
 heroImage: "3dprinting/3d-header.webp"
 ---
 

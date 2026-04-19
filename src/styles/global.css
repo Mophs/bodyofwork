@@ -5,22 +5,31 @@
  */
 
 :root {
-  --accent: #c8c8c8;
-  --accent-dark: #898989;
-  --accent-link: #232323;
-  --accent-link-hover: #ab2f2f;
+  --background-colour: #0b010f;
+  --text-colour: rgb(223, 108, 47);
 
-  --padding-sides: 12vw;
+  --accent: rgb(223, 108, 47);
+  --accent-dark: #898989;
+  --accent-link: var(var(--text-colour));
+  --accent-link-hover: #fa4242;
+
+  --outline-colour: rgb(223, 108, 47);
+  --outline-offset: 0.2rem;
+  --outline-thickness: 0.01rem;
+  --padding-sides: 0;
   --padding-topbot: 0;
 
+  --animborder: #daebcc;
   --black: 15, 18, 25;
   --gray: 96, 115, 159;
   --gray-light: 229, 233, 240;
   --gray-dark: 34, 41, 57;
   --gray-gradient: rgba(var(--gray-light), 50%), #fff;
-  --box-shadow: 0 2px 6px rgba(var(--gray), 25%),
-    0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%);
+  --box-shadow:
+    0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
+    0 16px 32px rgba(var(--gray), 33%);
 }
+
 @font-face {
   font-family: "LexendDeca";
   src: url("/fonts/LexendDeca-VariableFont_wght.ttf");
@@ -28,7 +37,41 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("/fonts/SpaceGrotesk-VariableFont_wght.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  color: (var(--text-colour));
+}
+.sideimgwrapper {
+  position: relative;
+
+  /* max-height: 10em; */
+  max-width: min(10em, 20vw);
+  max-height: 10vw;
+  margin: 0 0 0 auto;
+  object-fit: cover;
+}
+.sideimg {
+  position: fixed;
+  max-width: 20vh;
+  max-height: 100%;
+  /* margin: 0 0 0 auto; */
+  filter: drop-shadow(0 0 0.1rem white);
+
+  /* float: right; */
+  z-index: 10;
+}
+.wrapper {
+  margin: 0 auto;
+  max-width: 100ch;
+  /* border: 2px dotted red; */
+}
 body {
+  background-color: var(--background-colour);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
@@ -37,7 +80,8 @@ body {
   /* background-size: 100% 600px; */
   word-wrap: break-word;
   overflow-wrap: break-word;
-  color: rgb(var(--gray-dark));
+  color: var(--text-colour);
+
   /* font-size: 20px; */
   /* font-size: min(calc(1ex / 0.44), 1.5rem); */
   font-size: 1rem;
@@ -46,6 +90,8 @@ body {
 .container {
   padding: var(--padding-topbot) var(--padding-sides) var(--padding-topbot)
     var(--padding-sides);
+  /* border: 2px dotted blue; */
+  margin: 0 auto;
 }
 .sidebyside-container {
   display: flex;
@@ -65,6 +111,9 @@ main {
   font-weight: 300;
   display: inline;
 }
+.header-links {
+  font-family: "SpaceGrotesk", sans-serif;
+}
 /* TOR name word inline */
 .name-small {
   display: inline;
@@ -83,23 +132,24 @@ h4,
 h5,
 h6 {
   margin: 0 0 0.5rem 0;
-  color: rgb(var(--black));
+  color: rgb(var(--text-colour));
+
   line-height: 1.2;
   text-wrap: balance;
-  font-family: "LexendDeca", sans-serif;
+  font-family: "SpaceGrotesk", sans-serif;
 }
 article h1 {
   font-size: 2.5em;
   line-height: calc(1ex / 0.42);
-
-  margin: calc(1ex / 0.42);
+  margin: calc(1ex / 0.82), 0;
 }
 
 article h2 {
   font-size: 1.4em;
   line-height: calc(1ex / 0.42);
-  /* margin: calc(1ex / 0.42) 0; */
-  margin: 0;
+  margin: calc(1ex / 0.42) 0;
+  /* margin: 0;
+  margin-bottom: 1ex; */
 }
 
 article h3 {
@@ -119,14 +169,16 @@ article p {
   line-height: calc(1ex / 0.32);
   /* margin: calc(1ex / 0.64) 0; */
   width: min(60ch, calc(100% - 64px));
+  /* width: max(60ch, 80ch); */
+  margin: 0 auto;
   max-width: 100%;
   text-align: left;
   hyphens: auto;
 }
 video {
-  width: 60ch;
-
-  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin: auto;
 }
 strong,
 b {
@@ -142,6 +194,7 @@ a:hover {
 
 .prose p {
   margin-bottom: 2em;
+  /* margin: 0 auto; */
 }
 textarea {
   width: 100%;
@@ -153,7 +206,12 @@ input {
 table {
   width: 100%;
 }
-
+.blog-post-hero-crop {
+  /* border: 2px dotted green; */
+}
+.hero-image {
+  /* object-fit: cover; */
+}
 img {
   max-width: 100%;
 
@@ -212,4 +270,52 @@ hr {
   clip-path: inset(50%);
   /* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
   white-space: nowrap;
+}
+
+.rotate {
+  animation: rotateconstant 60s infinite;
+  -webkit-animation: rotateconstant 60s linear infinite;
+  -moz-animation: rotateconstant 60s linear infinite;
+}
+
+@-moz-keyframes rotateconstant {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotateconstant {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes rotateconstant {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.grow {
+  animation: growslow 10s ease-in-out infinite;
+}
+@keyframes growslow {
+  0% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 0.97;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+.bob {
+  animation: bob 6s ease-in-out infinite;
+}
+@keyframes bob {
+  50% {
+    translate: 0 0.5em;
+  }
 }

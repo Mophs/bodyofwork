@@ -1,6 +1,6 @@
 ---
-title: "GlitzClub's Album Announcement"
-description: "Promotional video for an album announcement"
+title: "GlitzClub"
+description: "Album release – Promo video"
 pubDate: "Dec 12 2024"
 heroImage: "glitzclub/0504-mg.jpg"
 ---

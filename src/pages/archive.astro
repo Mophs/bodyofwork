@@ -6,6 +6,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Image from "astro/components/Image.astro";
 import coverphoto from "../content/decor/towers.png";
 import Gallery from "../components/gallery.astro";
+import ColumnGallery from "../components/ColumnGallery.astro";
 ---
 
 <!doctype html>
@@ -13,18 +14,28 @@ import Gallery from "../components/gallery.astro";
   <style>
     main {
       padding-top: 1vh;
+      width: 100%;
+    }
+    .wrapper {
+      width: 100%;
+      margin: auto;
+      max-width: 100%;
     }
   </style>
 
   <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 
   <body>
-    <style></style>
     <Header />
-    <div class="container">
-      <main>
-        <Gallery />
-      </main>
+
+    <div class="wrapper">
+      <div class="container">
+        <main>
+          <h2></h2>
+          <ColumnGallery />
+          <!-- <Gallery /> -->
+        </main>
+      </div>
     </div>
 
     <Footer />

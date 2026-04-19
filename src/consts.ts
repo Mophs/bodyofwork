@@ -3,3 +3,8 @@
 
 export const SITE_TITLE = "TOR HALLE-MCINTYRE";
 export const SITE_DESCRIPTION = "Projects and works by Tor Halle-McIntyre";
+export const PLACEHOLDER_IMAGE: ImageMetadata = import.meta.glob<{
+  default: ImageMetadata;
+}>("/src/content/decor/footer.jpg")[0];
+
+export const BLOG_ENABLED: boolean = false;

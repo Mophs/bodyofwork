@@ -1,6 +1,6 @@
 ---
-title: "Fates & Graces Dance"
-description: "Providing technical & artistic support for a dance piece"
+title: "Fates & Graces"
+description: "Dance Production – Artistic and technical assistant"
 pubDate: "Oct 1 2022"
 heroImage: "/src/content/projects/fatesandgraces/crouching_header_2x1_103CANON_IMG_0082.jpg"
 ---
