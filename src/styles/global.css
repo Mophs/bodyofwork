@@ -220,6 +220,13 @@ img {
   /* max-height: 50%; */
   /* border-radius: 8px; */
 }
+
+.landingimg {
+  margin: 0 auto;
+  width: 300px;
+  /* width: 100%; */
+  display: block;
+}
 code {
   padding: 2px 5px;
   background-color: rgb(var(--gray-light));
